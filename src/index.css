@@ -1,0 +1,372 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	font-size: 1.1rem;
+}
+
+p {
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: 50px;
+	color: red;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+h1.won {
+	font-size: 5rem;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1px;
+}
+
+h3 {
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: 1px;
+	color: black;
+	font-weight: bold;
+}
+
+h1.youwon {
+	font-size: 5rem;
+	font-weight: bold;
+	text-align: center;
+	color: red;
+	line-height: 1px;
+}
+
+p.score {
+	text-align: center;
+	color: gray;
+	line-height: 1px;
+	font-size: 1rem;
+	margin-top: 0px;
+}
+
+.btn {
+	font-size: 1rem;
+	background-color: black;
+	color: white;
+	margin: 0 auto;
+	display: block;
+}
+
+table.style1 {
+	border: 0px solid #bab8b8;;
+	width: 1300px;
+	height: 400px;
+	align-items: center;
+}
+
+table.style2 {
+	border: 1px solid #bab8b8;
+	background-color: black;
+}
+
+table.style2 td {
+	border: 1px solid #bab8b8;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	font-size: 1rem;
+	background-color: white;
+}
+
+table.style2 td:hover {
+	background-color: #f1f1f1;
+}
+
+
+table.style3 {
+	border: 0px solid #ece9e9;
+}
+
+table.style3 td {
+	border: 0px solid #bab8b8;
+	width: 0 auto;
+	height: 0 auto;
+	text-align: right;
+}
+
+.btn-ship {
+	background-color: white;
+	margin: 3px;
+	border-radius: 12px;
+}
+
+.btn-ship:hover {
+	outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 1px black;
+}
+
+.btn-ship:active {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 1px black;
+	background-color: #e3f9f9;
+}
+
+
+
+.btn-shipblack {
+	background: url(../public/images/picShipBlack.png);
+	height: 30px;
+	margin: 3px;
+	border-radius: 10px;
+}
+
+.btn-shipblack:hover {
+	outline-color: transparent;
+	background: url(../public/images/picShipClicked.png);
+    outline-style:solid;
+    box-shadow: 0 0 0 1px black;
+}
+
+.btn-shipblack:active {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 1px black;
+	background: url(../public/images/picShipClicked.png);
+}
+
+.btn-shipred {
+	background: url(../public/images/picShipRed.png);
+	height: 30px;
+	margin: 3px;
+	border-radius: 10px;
+}
+
+
+
+
+
+
+.btn-rotate {
+	font-size: 1.5rem;
+	background-color: black;
+	border-radius: 12px;
+	font-weight: bold;
+	color: white;
+	padding: 5px 10px 5px 10px 
+}
+
+.btn-gridsize {
+	font-size: 0.rem;
+	background-color: white;
+	border-radius: 12px;
+	color: gray;
+	padding: 2px 10px 2px 10px; 
+	margin-left: 200px;
+}
+
+.btn-gridsize:hover {
+	outline-color: transparent;
+    outline-style:solid;
+	color: black;
+    box-shadow: 0 0 0 1px gray;
+}
+
+.btn-gridsize:active {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 2px gray;
+	background-color: #ececec;
+}
+
+.btn-gssubmit {
+	font-size: 1rem;
+	background-color: white;
+	border-radius: 12px;
+	color: black;
+	font-weight: bold;
+	padding: 2px 10px 2px 10px; 
+	margin-top: 40px;
+	margin-left: 50px;
+}
+
+.btn-gssubmit:hover {
+	outline-color: transparent;
+    outline-style:solid;
+	color: black;
+    box-shadow: 0 0 0 1px gray;
+}
+
+.btn-gssubmit:active {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 2px gray;
+	background-color: #ececec;
+}
+
+.btn-gscancel {
+	font-size: 1rem;
+	background-color: white;
+	border-radius: 12px;
+	color: gray;
+	padding: 2px 10px 2px 10px; 
+	margin-top: 40px;
+	margin-left: 25px;
+}
+
+.btn-gscancel:hover {
+	outline-color: transparent;
+    outline-style:solid;
+	color: black;
+    box-shadow: 0 0 0 1px gray;
+}
+
+.btn-gscancel:active {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 2px gray;
+	background-color: #ececec;
+}
+
+
+
+
+
+.btn-rearrange {
+	font-size: 1rem;
+	background-color: white;
+	border-radius: 7px;
+	color: black;
+	padding: 2px 10px 2px 10px 
+}
+
+
+.btn-youwon {
+	font-size: 1.5rem;
+	background-color: white;
+	color: black;
+	border-radius: 12px;
+	font-weight: bold;
+	display: block;
+	margin: 0 auto;
+	padding: 7px 15px 7px 15px 
+}
+
+.btn-won {
+	font-size: 1.5rem;
+	background-color: black;
+	color: white;
+	border-radius: 12px;
+	font-weight: bold;
+	display: block;
+	margin: 0 auto;
+	padding: 7px 15px 7px 15px 
+}
+
+.btn-play {
+	font-size: 2rem;
+	background-color: black;
+	color: white;
+	border-radius: 12px;
+	font-weight: bold;
+	display: block;
+	margin: 0 auto;
+	padding: 7px 15px 7px 15px 
+}
+
+.popup {
+	position: absolute;
+	margin: 15px 0px 0px 40px;
+}
+
+.popup-inner {
+	position: relative;
+	padding: 15px;
+	width: 0 auto;
+	max-width: 640px;
+	align-items: center;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	font-size: 1.5rem;
+	border-radius: 12px;
+}
+
+.popup-inner .close-btn {
+	margin-top: 20px;
+	margin-left: 57px;
+	background-color: white;
+	color: black;
+	border-radius: 12px;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 7px;
+}
+
+.popup-inner .vertical-btn {
+	background-color: white;
+	color: black;
+	border-radius: 12px;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 5px;
+	margin-right: 5px;
+}
+
+.popup-inner .horizontal-btn {
+	background-color: white;
+	color: black;
+	border-radius: 12px;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 5px;
+	margin-left: 5px;
+}
+
+p.gridsize {
+	font-size: 2rem;
+	text-align: left;
+	font-weight: normal;
+	line-height: 5px;
+	color: black;
+}
+
+.popup-gridsize {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.2);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.popup-gridsize-inner {
+	position: relative;
+	padding: 15px;
+	width: 0 auto;
+	max-width: 640px;
+	align-items: left;
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+	font-size: 1.4rem;
+	border-radius: 12px;
+}
+
+.popup-gridsize-inner .close-btn {
+	margin-top: 20px;
+	margin-left: 57px;
+	background-color: black;
+	color: black;
+	border-radius: 12px;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 7px;
+}
+
+table.gridsize td {
+	padding: 5px;
+}
