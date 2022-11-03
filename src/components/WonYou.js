@@ -8,9 +8,7 @@ const WonYou = () => {
       <h1 className='youwon'>
         You Won!
       </h1>
-      <ButtonPlayAgain>
-        Play Again
-      </ButtonPlayAgain>
+      <ButtonPlayAgain />
     </>
   )
 }
