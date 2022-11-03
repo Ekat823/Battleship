@@ -1,14 +1,18 @@
-const WonYou = ({handleRestart}) => {
-    return (
-        <>
-            <h1 className='youwon'>
-                You Won!
-            </h1>
-            <button className='btn-youwon' onClick={handleRestart}>
-                Play Again
-            </button>
-        </>
-    )
+import React from 'react';
+import ButtonPlayAgain from './ButtonPlayAgain';
+
+const WonYou = () => {
+
+  return (
+    <>
+      <h1 className='youwon'>
+        You Won!
+      </h1>
+      <ButtonPlayAgain>
+        Play Again
+      </ButtonPlayAgain>
+    </>
+  )
 }
 
 export default WonYou

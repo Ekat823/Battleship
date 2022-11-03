@@ -35,7 +35,7 @@ const reducer = (state, action) => {
             return turnOnPlay(state)
         case 'play':
             return handlePlaying(state, action)
-        case 'won':
+        case 'WON':
             return turnOnRestart()
         default:
     }

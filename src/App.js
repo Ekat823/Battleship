@@ -40,9 +40,9 @@ const App = () => {
 
         <div>
           {state.enemyWon ?
-            <WonThey handleRestart={() => dispatch({ type: 'won' })} />
+            <WonThey/>
             : state.playerWon ?
-              <WonYou handleRestart={() => dispatch({ type: 'won' })} />
+              <WonYou />
               : null
           }
         </div>
