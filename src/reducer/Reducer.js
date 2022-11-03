@@ -1,12 +1,12 @@
-import handlePlacingShips from "./HandlePlacingShips";
-import handlePlaying from "./HandlePlaying";
-import turnOnRestart from "./TurnOnRestart";
-import turnOnPlay from "./TurnOnPlay";
-import turnOnRearrange from "./TurnOnRearrange";
-import handleChoosingShips from "./HandleChoosingShips";
-import turnOnChangeGridSize from "./TurnOnChangeGridSize";
-import submitChangeGridSize from "./SubmitChangeGridSize";
-import cancelChangeGridSize from "./CancelChangeGridSize";
+import handlePlacingShips from "./actions/HandlePlacingShips";
+import handlePlaying from "./actions/HandlePlaying";
+import turnOnRestart from "./actions/TurnOnRestart";
+import turnOnPlay from "./actions/TurnOnPlay";
+import turnOnRearrange from "./actions/TurnOnRearrange";
+import handleChoosingShips from "./actions/HandleChoosingShips";
+import turnOnChangeGridSize from "./actions/TurnOnChangeGridSize";
+import submitChangeGridSize from "./actions/SubmitChangeGridSize";
+import cancelChangeGridSize from "./actions/CancelChangeGridSize";
 
 const reducer = (state, action) => {
     let newState;

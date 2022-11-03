@@ -1,4 +1,4 @@
-import getInitialState from "../state/GetInitialState";
+import getInitialState from "../../state/GetInitialState";
 
 const turnOnRearrange = () => {
     return getInitialState();
