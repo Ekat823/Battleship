@@ -11,7 +11,7 @@ import cancelChangeGridSize from "./CancelChangeGridSize";
 const reducer = (state, action) => {
     let newState;
     switch (action.type) {
-        case 'turnOnChangeGridSize':
+        case 'TURN_ON_CHANGE_GRID_SIZE':
             return turnOnChangeGridSize(state)
         case 'submitChangeGridSize':
             return submitChangeGridSize(state, action)
