@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from 'react';
+import { BattleshipContext } from '../App';
 
-const TableShips = ({handleClickChoose, playerShips, shipsSize, shipsNumber, handleClickRearrange, handleClickPlay, message}) => {
+const TableShips = ({handleClickChoose, handleClickRearrange, handleClickPlay}) => {
+
+  const battleshipContext = useContext(BattleshipContext)
 
     const tableWidth = 1;
-    const tableHeight = shipsNumber;
+    const tableHeight = battleshipContext.state.shipsNumber;
        
     const renderTable = (rows, columns) => {
         
@@ -19,10 +22,10 @@ const TableShips = ({handleClickChoose, playerShips, shipsSize, shipsNumber, han
                 const index = i * rows + j;
                 c.push(
                     <td key={index} onClick={handleClickChoose(index)}>
-                        {playerShips[index] === 'placed' ? null : 
+                        {battleshipContext.state.playerShips[index] === 'placed' ? null : 
                             <button 
-                                className={buttons[playerShips[index]]} 
-                                style={{width:`${40 * shipsSize[index] + 4}px`}} 
+                                className={buttons[battleshipContext.state.playerShips[index]]} 
+                                style={{width:`${40 * battleshipContext.state.shipsSize[index] + 4}px`}} 
                             />
                         }
                     </td>
@@ -38,11 +41,11 @@ const TableShips = ({handleClickChoose, playerShips, shipsSize, shipsNumber, han
     return (
         <div>
             <p>
-                {message === 'click ship' ? 
+                {battleshipContext.state.placeShipsMessage === 'click ship' ? 
                         'Click a Ship' 
-                    : message === 'click cell' ? 
+                    : battleshipContext.state.placeShipsMessage === 'click cell' ? 
                         'Click a Cell'
-                    : message === 'play' ?
+                    : battleshipContext.state.placeShipsMessage === 'play' ?
                         <>
                             <button className='btn-rearrange' onClick={handleClickRearrange}>
                                 Rearrange

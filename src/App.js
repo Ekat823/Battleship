@@ -51,10 +51,6 @@ const App = () => {
             <tr>
               <td>
                 <TableShips
-                  message={state.placeShipsMessage}
-                  shipsNumber={state.shipsNumber}
-                  playerShips={state.playerShips}
-                  shipsSize={state.shipsSize}
                   handleClickRearrange={() => dispatch({ type: 'turnOnRearrange' })}
                   handleClickPlay={() => dispatch({ type: 'turnOnPlay' })}
                   handleClickChoose={(index) => () => dispatch({ type: 'chooseShip', index })}
