@@ -3,7 +3,7 @@ import { BattleshipContext } from '../App';
 import ButtonRearrange from './ButtonRearrange';
 import ButtonPlay from './ButtonPlay';
 
-const TableShips = ({ handleClickChoose }) => {
+const TableShips = () => {
 
   const battleshipContext = useContext(BattleshipContext)
 
@@ -23,7 +23,10 @@ const TableShips = ({ handleClickChoose }) => {
       for (let j = 0; j < rows; j++) {
         const index = i * rows + j;
         c.push(
-          <td key={index} onClick={handleClickChoose(index)}>
+          <td
+            key={index}
+            onClick={() => battleshipContext.dispatch({ type: 'CHOOSE_SHIP', index })}
+          >
             {battleshipContext.state.playerShips[index] === 'placed' ? null :
               <button
                 className={buttons[battleshipContext.state.playerShips[index]]}
@@ -53,7 +56,7 @@ const TableShips = ({ handleClickChoose }) => {
                 <br />
                 <ButtonPlay />
               </>
-              : null
+              : <ButtonRearrange />
         }
       </p>
       <table className='style3'>

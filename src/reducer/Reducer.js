@@ -17,7 +17,7 @@ const reducer = (state, action) => {
             return submitChangeGridSize(state, action)
         case 'cancelChangeGridSize':
             return cancelChangeGridSize(state)
-        case 'chooseShip':
+        case 'CHOOSE_SHIP':
             return handleChoosingShips(state, action)
         case 'placeShip':
             return handlePlacingShips(state, action)

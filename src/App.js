@@ -50,9 +50,7 @@ const App = () => {
           <tbody>
             <tr>
               <td>
-                <TableShips
-                  handleClickChoose={(index) => () => dispatch({ type: 'chooseShip', index })}
-                />
+                <TableShips />
               </td>
               <td>
                 <TableLeft
