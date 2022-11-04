@@ -19,7 +19,7 @@ const reducer = (state, action) => {
             return cancelChangeGridSize(state)
         case 'CHOOSE_SHIP':
             return handleChoosingShips(state, action)
-        case 'placeShip':
+        case 'PLACE_SHIP':
             return handlePlacingShips(state, action)
         case 'turnOffAlert':
             return { ...state, alert: false }

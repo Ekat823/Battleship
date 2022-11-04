@@ -3,7 +3,7 @@ import { BattleshipContext } from '../App';
 import ShipImg from './ShipImg';
 import PopupConfirm from './PopupConfirm';
 
-const TableLeft = ({ handleClickPlace, triggerVertical, triggerHorizontal }) => {
+const TableLeft = ({ triggerVertical, triggerHorizontal }) => {
 
   const battleshipContext = useContext(BattleshipContext)
 
@@ -24,7 +24,7 @@ const TableLeft = ({ handleClickPlace, triggerVertical, triggerHorizontal }) => 
       for (let j = 0; j < columns; j++) {
         const num = i * columns + j;
         c.push(
-          <td key={num} onClick={handleClickPlace(num)}>
+          <td key={num} onClick={() => battleshipContext.dispatch({ type: 'PLACE_SHIP', num })}>
             <ShipImg el={shipsImgs[battleshipContext.state.cellsLeft[num]]} />
             {battleshipContext.state.currentNum === num ? <PopupConfirm
               status={battleshipContext.state.chooseVerticalOrHorizontal}

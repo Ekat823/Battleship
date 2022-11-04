@@ -54,7 +54,6 @@ const App = () => {
               </td>
               <td>
                 <TableLeft                  
-                  handleClickPlace={(num) => () => dispatch({ type: 'placeShip', num })}
                   triggerVertical={(num) => (e) => {
                     e.stopPropagation();
                     return dispatch({ type: 'chooseVertical', num })
