@@ -1,10 +1,14 @@
+import React, { useContext } from 'react';
+import { BattleshipContext } from '../App';
 import ShipImg from './ShipImg';
 import PopupConfirm from './PopupConfirm';
 
-const TableLeft = ({ cellsLeft, hit1, tableSize, handleClickPlace, message, status, triggerVertical, triggerHorizontal, currentNum }) => {
+const TableLeft = ({ handleClickPlace, triggerVertical, triggerHorizontal }) => {
 
-  const tableWidth = tableSize;
-  const tableHeight = tableSize;
+  const battleshipContext = useContext(BattleshipContext)
+
+  const tableWidth = battleshipContext.state.tableSize;
+  const tableHeight = battleshipContext.state.tableSize;
 
   const renderTable = (rows, columns) => {
 
@@ -21,9 +25,9 @@ const TableLeft = ({ cellsLeft, hit1, tableSize, handleClickPlace, message, stat
         const num = i * columns + j;
         c.push(
           <td key={num} onClick={handleClickPlace(num)}>
-            <ShipImg el={shipsImgs[cellsLeft[num]]} />
-            {currentNum === num ? <PopupConfirm
-              status={status}
+            <ShipImg el={shipsImgs[battleshipContext.state.cellsLeft[num]]} />
+            {battleshipContext.state.currentNum === num ? <PopupConfirm
+              status={battleshipContext.state.chooseVerticalOrHorizontal}
               triggerVertical={triggerVertical(num)}
               triggerHorizontal={triggerHorizontal(num)}
             />
@@ -38,7 +42,7 @@ const TableLeft = ({ cellsLeft, hit1, tableSize, handleClickPlace, message, stat
 
   return (
     <div className='container'>
-      {message === null ? <p className='score'>{hit1} {hit1 === 1 ? 'Hit' : 'Hits'}</p>
+      {battleshipContext.state.placeShipsMessage === null ? <p className='score'>{battleshipContext.state.enemyHits} {battleshipContext.state.enemyHits === 1 ? 'Hit' : 'Hits'}</p>
         : null}
       <table className='style2'>
         <tbody>

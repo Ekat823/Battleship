@@ -53,15 +53,8 @@ const App = () => {
                 <TableShips />
               </td>
               <td>
-                <TableLeft
-                  cellsLeft={state.cellsLeft}
-                  hit1={state.enemyHits}
-                  tableSize={state.tableSize}
-                  message={state.placeShipsMessage}
+                <TableLeft                  
                   handleClickPlace={(num) => () => dispatch({ type: 'placeShip', num })}
-
-                  status={state.chooseVerticalOrHorizontal}
-                  currentNum={state.currentNum}
                   triggerVertical={(num) => (e) => {
                     e.stopPropagation();
                     return dispatch({ type: 'chooseVertical', num })

@@ -27,8 +27,8 @@ const TableShips = () => {
             key={index}
             onClick={() => battleshipContext.dispatch({ type: 'CHOOSE_SHIP', index })}
           >
-            {battleshipContext.state.playerShips[index] === 'placed' ? null :
-              <button
+            {battleshipContext.state.playerShips[index] === 'placed' ? null
+              : <button
                 className={buttons[battleshipContext.state.playerShips[index]]}
                 style={{ width: `${40 * battleshipContext.state.shipsSize[index] + 4}px` }}
               />
@@ -38,8 +38,6 @@ const TableShips = () => {
       }
       result.push(<tr key={i}>{c}</tr>);
     }
-    //  console.log('blackFleet', blackFleet)
-    //  console.log('redFleet', redFleet)
     return result;
   };
 
