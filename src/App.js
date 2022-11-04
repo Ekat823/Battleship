@@ -51,8 +51,6 @@ const App = () => {
             <tr>
               <td>
                 <TableShips
-                  handleClickRearrange={() => dispatch({ type: 'turnOnRearrange' })}
-                  handleClickPlay={() => dispatch({ type: 'turnOnPlay' })}
                   handleClickChoose={(index) => () => dispatch({ type: 'chooseShip', index })}
                 />
               </td>
