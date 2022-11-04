@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { BattleshipContext } from '../App';
 
-const TableShips = ({handleClickChoose, handleClickRearrange, handleClickPlay}) => {
+const TableShips = ({handleClickChoose, handleClickPlay}) => {
 
   const battleshipContext = useContext(BattleshipContext)
 
@@ -47,11 +47,11 @@ const TableShips = ({handleClickChoose, handleClickRearrange, handleClickPlay}) 
                         'Click a Cell'
                     : battleshipContext.state.placeShipsMessage === 'play' ?
                         <>
-                            <button className='btn-rearrange' onClick={handleClickRearrange}>
+                            <button className='btn-rearrange' onClick={() => battleshipContext.dispatch({ type: 'TURN_ON_REARRANGE' })}>
                                 Rearrange
                             </button>
                             <br />
-                            <button className='btn-play' onClick={handleClickPlay}>
+                            <button className='btn-play' onClick={() => battleshipContext.dispatch({ type: 'TURN_ON_PLAY' })}>
                                 Play
                             </button>
                         </>

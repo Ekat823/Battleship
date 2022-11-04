@@ -29,9 +29,9 @@ const reducer = (state, action) => {
         case 'chooseHorizontal':
             newState = { ...state, chooseVerticalOrHorizontal: false, chooseHorizontal: true, }
             return handlePlacingShips(newState, action)
-        case 'turnOnRearrange':
+        case 'TURN_ON_REARRANGE':
             return turnOnRearrange()
-        case 'turnOnPlay':
+        case 'TURN_ON_PLAY':
             return turnOnPlay(state)
         case 'play':
             return handlePlaying(state, action)
