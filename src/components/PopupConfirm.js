@@ -1,14 +1,31 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { BattleshipContext } from '../App';
 
-const PopupConfirm = ({triggerVertical, triggerHorizontal, status}) => {
-  return status ? (
+const PopupConfirm = ({ num }) => {
+
+  const battleshipContext = useContext(BattleshipContext)
+
+  return battleshipContext.state.chooseVerticalOrHorizontal ? (
     <div className='popup'>
-        <div className='popup-inner'>
-            <button className='vertical-btn' onClick={triggerVertical}>Vertical</button>
-            <button className='horizontal-btn' onClick={triggerHorizontal}>Horizontal</button>
-        </div>
+      <div className='popup-inner'>
+        <button
+          className='vertical-btn'
+          onClick={() => battleshipContext.dispatch({ type: 'CHOOSE_VERTICAL', num })
+          }
+        >
+          Vertical
+        </button>
+        <button
+          className='horizontal-btn'
+          onClick={() => battleshipContext.dispatch({ type: 'CHOOSE_HORIZONTAL', num })
+          }
+        >
+          Horizontal
+        </button>
+      </div>
     </div>
-  ) : null;
+  )
+    : null;
 }
 
 export default PopupConfirm

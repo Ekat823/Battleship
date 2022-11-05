@@ -23,10 +23,10 @@ const reducer = (state, action) => {
             return handlePlacingShips(state, action)
         case 'turnOffAlert':
             return { ...state, alert: false }
-        case 'chooseVertical':
+        case 'CHOOSE_VERTICAL':
             newState = { ...state, chooseVerticalOrHorizontal: false, chooseVertical: true, }
             return handlePlacingShips(newState, action)
-        case 'chooseHorizontal':
+        case 'CHOOSE_HORIZONTAL':
             newState = { ...state, chooseVerticalOrHorizontal: false, chooseHorizontal: true, }
             return handlePlacingShips(newState, action)
         case 'TURN_ON_REARRANGE':

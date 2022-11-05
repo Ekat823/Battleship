@@ -26,11 +26,8 @@ const TableLeft = ({ triggerVertical, triggerHorizontal }) => {
         c.push(
           <td key={num} onClick={() => battleshipContext.dispatch({ type: 'PLACE_SHIP', num })}>
             <ShipImg el={shipsImgs[battleshipContext.state.cellsLeft[num]]} />
-            {battleshipContext.state.currentNum === num ? <PopupConfirm
-              status={battleshipContext.state.chooseVerticalOrHorizontal}
-              triggerVertical={triggerVertical(num)}
-              triggerHorizontal={triggerHorizontal(num)}
-            />
+            {battleshipContext.state.currentNum === num ? 
+            <PopupConfirm num={num} />
               : null}
           </td>
         );

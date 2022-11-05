@@ -53,16 +53,7 @@ const App = () => {
                 <TableShips />
               </td>
               <td>
-                <TableLeft                  
-                  triggerVertical={(num) => (e) => {
-                    e.stopPropagation();
-                    return dispatch({ type: 'chooseVertical', num })
-                  }}
-                  triggerHorizontal={(num) => (e) => {
-                    e.stopPropagation();
-                    return dispatch({ type: 'chooseHorizontal', num })
-                  }}
-                />
+                <TableLeft />
               </td>
               <td>
                 <TableRight
