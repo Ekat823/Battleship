@@ -49,29 +49,13 @@ const App = () => {
         <table className='style1'>
           <tbody>
             <tr>
-              <td>
-                <TableShips />
-              </td>
-              <td>
-                <TableLeft />
-              </td>
-              <td>
-                <TableRight
-                  cellsRight={state.cellsRight}
-                  hit2={state.playerHits}
-                  tableSize={state.tableSize}
-                  message={state.placeShipsMessage}
-                  handleClickMove={(numPlay) => () => dispatch({ type: 'play', numPlay })}
-                />
-              </td>
+              <td><TableShips /></td>
+              <td><TableLeft /></td>
+              <td><TableRight /></td>
             </tr>
           </tbody>
         </table>
-        <PopupAlert
-          status={state.alert}
-          text={state.alertText}
-          trigger={() => dispatch({ type: 'turnOffAlert' })}
-        />
+        <PopupAlert />
       </div>
     </BattleshipContext.Provider>
   );
