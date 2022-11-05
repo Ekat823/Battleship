@@ -11,7 +11,7 @@ const PopupAlert = ({ trigger }) => {
         <div>{battleshipContext.state.alertText}</div>
         <button
           className='close-btn'
-          onClick={() => battleshipContext.dispatch({ type: 'turnOffAlert' })}
+          onClick={() => battleshipContext.dispatch({ type: 'TURN_OFF_ALERT' })}
         >
           Okay
         </button>

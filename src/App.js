@@ -31,8 +31,8 @@ const App = () => {
               cruiser={state.shipsTypes[2].numOfShips}
               battleship={state.shipsTypes[3].numOfShips}
               grid={state.gridSize}
-              triggerSubmitChangeGridSize={(valueCorvette, valueDestroyer, valueCruiser, valueBattleship, valueGrid) => () => dispatch({ type: 'submitChangeGridSize', valueCorvette, valueDestroyer, valueCruiser, valueBattleship, valueGrid })}
-              triggerCancelChangeGridSize={() => dispatch({ type: 'cancelChangeGridSize' })}
+              triggerSubmitChangeGridSize={(valueCorvette, valueDestroyer, valueCruiser, valueBattleship, valueGrid) => () => dispatch({ type: 'SUBMIT_CHANGE_GRID_SIZE', valueCorvette, valueDestroyer, valueCruiser, valueBattleship, valueGrid })}
+              triggerCancelChangeGridSize={() => dispatch({ type: 'CANCEL_CHANGE_GRID_SIZE' })}
             />
           </div>
           : null

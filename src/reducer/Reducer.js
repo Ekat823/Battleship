@@ -13,15 +13,15 @@ const reducer = (state, action) => {
     switch (action.type) {
         case 'TURN_ON_CHANGE_GRID_SIZE':
             return turnOnChangeGridSize(state)
-        case 'submitChangeGridSize':
+        case 'SUBMIT_CHANGE_GRID_SIZE':
             return submitChangeGridSize(state, action)
-        case 'cancelChangeGridSize':
+        case 'CANCEL_CHANGE_GRID_SIZE':
             return cancelChangeGridSize(state)
         case 'CHOOSE_SHIP':
             return handleChoosingShips(state, action)
         case 'PLACE_SHIP':
             return handlePlacingShips(state, action)
-        case 'turnOffAlert':
+        case 'TURN_OFF_ALERT':
             return { ...state, alert: false }
         case 'CHOOSE_VERTICAL':
             newState = { ...state, chooseVerticalOrHorizontal: false, chooseVertical: true, }
@@ -33,7 +33,7 @@ const reducer = (state, action) => {
             return turnOnRearrange()
         case 'TURN_ON_PLAY':
             return turnOnPlay(state)
-        case 'play':
+        case 'PLAY':
             return handlePlaying(state, action)
         case 'WON':
             return turnOnRestart()

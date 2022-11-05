@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { BattleshipContext } from '../App';
 import ShipImg from './ShipImg';
 
-const TableRight = ({ handleClickMove }) => {
+const TableRight = () => {
 
   const battleshipContext = useContext(BattleshipContext)
 
@@ -25,7 +25,7 @@ const TableRight = ({ handleClickMove }) => {
         c.push(
           <td
             key={numPlay}
-            onClick={() => battleshipContext.dispatch({ type: 'play', numPlay })}
+            onClick={() => battleshipContext.dispatch({ type: 'PLAY', numPlay })}
           >
             <ShipImg
               el={shipsImgs[battleshipContext.state.cellsRight[numPlay]]}
