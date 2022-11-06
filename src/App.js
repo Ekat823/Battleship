@@ -37,6 +37,7 @@ const App = () => {
               : null
           }
         </div>
+
         <table className='style1'>
           <tbody>
             <tr>
@@ -46,7 +47,9 @@ const App = () => {
             </tr>
           </tbody>
         </table>
+
         <PopupAlert />
+        
       </div>
     </BattleshipContext.Provider>
   );

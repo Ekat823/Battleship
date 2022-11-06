@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonPlayAgain from './ButtonPlayAgain';
+import ButtonPlayAgain from './forWonTheyAndWonYou/ButtonPlayAgain';
 
 const WonYou = () => {
 

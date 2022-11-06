@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { BattleshipContext } from '../App';
-import ShipImg from './ShipImg';
-import PopupConfirm from './PopupConfirm';
+import ShipImg from './forTableLeftAndTableRight/ShipImg';
+import PopupConfirm from './forTableLeftAndTableRight/PopupConfirm';
 
 const TableLeft = ({ triggerVertical, triggerHorizontal }) => {
 

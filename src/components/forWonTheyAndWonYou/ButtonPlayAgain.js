@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { BattleshipContext } from '../App';
+import { BattleshipContext } from '../../App';
 
 const ButtonPlayAgain = () => {
 

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { BattleshipContext } from '../App';
-import ButtonRearrange from './ButtonRearrange';
-import ButtonPlay from './ButtonPlay';
+import ButtonRearrange from './forTableShips/ButtonRearrange';
+import ButtonPlay from './forTableShips/ButtonPlay';
 
 const TableShips = () => {
 

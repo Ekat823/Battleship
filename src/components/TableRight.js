@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { BattleshipContext } from '../App';
-import ShipImg from './ShipImg';
+import ShipImg from './forTableLeftAndTableRight/ShipImg';
 
 const TableRight = () => {
 
