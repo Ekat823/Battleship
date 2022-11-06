@@ -47,13 +47,13 @@ const reducer = (state, action) => {
       newState = { ...state, chooseVerticalOrHorizontal: false, chooseHorizontal: true, }
       return handlePlacingShips(newState, action)
     case 'TURN_ON_REARRANGE':
-      return turnOnRearrange()
+      return turnOnRearrange(state)
     case 'TURN_ON_PLAY':
       return turnOnPlay(state)
     case 'PLAY':
       return handlePlaying(state, action)
     case 'WON':
-      return turnOnRestart()
+      return turnOnRestart(state)
     default:
   }
 }
