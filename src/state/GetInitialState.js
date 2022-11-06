@@ -20,6 +20,12 @@ const getInitialState = () => {
 
   const InitialState = {
     changeGridSize: false,
+    corvetteNum: shipsTypes[0].numOfShips,
+    destroyerNum: shipsTypes[1].numOfShips,
+    cruiserNum: shipsTypes[2].numOfShips,
+    battleshipNum: shipsTypes[3].numOfShips,
+    shipsNum: [0, 1, 2, 3, 4],
+    cellsNum: [6, 7, 8, 9, 10, 11, 12],
     placeShipsMessage: 'click ship',
     tableSize: tableSize,
     gridSize: tableSize,

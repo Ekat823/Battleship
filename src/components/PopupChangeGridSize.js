@@ -1,31 +1,19 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react';
+import { BattleshipContext } from '../App';
 
-const PopupChangeGridSize = ({ triggerSubmitChangeGridSize, triggerCancelChangeGridSize, status, corvette, destroyer, cruiser, battleship, grid }) => {
-  const [valueCorvette, setValueCorvette] = useState(corvette)
-  const [valueDestroyer, setValueDestroyer] = useState(destroyer)
-  const [valueCruiser, setValueCruiser] = useState(cruiser)
-  const [valueBattleship, setValueBattleship] = useState(battleship)
-  const [valueGrid, setValueGrid] = useState(grid)
-  const shipsNumber = [0, 1, 2, 3, 4]
-  const gridSize = [6, 7, 8, 9, 10, 11, 12]
+const PopupChangeGridSize = ({ triggerSubmitChangeGridSize }) => {
 
-  const handleChangeCorvette = (event) => {
-    setValueCorvette(event.target.value);
-  }
-  const handleChangeDestroyer = (event) => {
-    setValueDestroyer(event.target.value);
-  }
-  const handleChangeCruiser = (event) => {
-    setValueCruiser(event.target.value);
-  }
-  const handleChangeBattleship = (event) => {
-    setValueBattleship(event.target.value);
-  }
-  const handleChangeGrid = (event) => {
-    setValueGrid(event.target.value);
-  }
+  const battleshipContext = useContext(BattleshipContext)
 
-  return status ? (
+  let corvetteNum = battleshipContext.state.corvetteNum;
+  let destroyerNum = battleshipContext.state.destroyerNum;
+  let cruiserNum = battleshipContext.state.cruiserNum;
+  let battleshipNum = battleshipContext.state.battleshipNum;
+  let gridSize = battleshipContext.state.gridSize;
+  let shipsNum = battleshipContext.state.shipsNum
+  let cellsNum = battleshipContext.state.cellsNum
+
+  return battleshipContext.state.changeGridSize ? (
     <div className='popup-gridsize'>
       <div className='popup-gridsize-inner'>
         <h3>Ships</h3>
@@ -37,8 +25,14 @@ const PopupChangeGridSize = ({ triggerSubmitChangeGridSize, triggerCancelChangeG
               </td>
               <td>
                 <form>
-                  <select value={valueCorvette} onChange={handleChangeCorvette}>
-                    {shipsNumber.map((el, i) =>
+                  <select
+                    value={corvetteNum}
+                    onChange={(e) => battleshipContext.dispatch({
+                      type: 'HANDLE_CHANGE_CORVETTE_NUM',
+                      payload: e.target.value
+                    })}
+                  >
+                    {shipsNum.map((el, i) =>
                       <option key={i} value={el}> {el}</option>
                     )}
                   </select>
@@ -51,8 +45,13 @@ const PopupChangeGridSize = ({ triggerSubmitChangeGridSize, triggerCancelChangeG
               </td>
               <td>
                 <form>
-                  <select value={valueDestroyer} onChange={handleChangeDestroyer}>
-                    {shipsNumber.map((el, i) =>
+                  <select
+                    value={destroyerNum}
+                    onChange={(e) => battleshipContext.dispatch({
+                      type: 'HANDLE_CHANGE_DESTROYER_NUM',
+                      payload: e.target.value
+                    })}>
+                    {shipsNum.map((el, i) =>
                       <option key={i} value={el}> {el}</option>
                     )}
                   </select>
@@ -65,8 +64,13 @@ const PopupChangeGridSize = ({ triggerSubmitChangeGridSize, triggerCancelChangeG
               </td>
               <td>
                 <form>
-                  <select value={valueCruiser} onChange={handleChangeCruiser}>
-                    {shipsNumber.map((el, i) =>
+                  <select
+                    value={cruiserNum}
+                    onChange={(e) => battleshipContext.dispatch({
+                      type: 'HANDLE_CHANGE_CRUISER_NUM',
+                      payload: e.target.value
+                    })}>
+                    {shipsNum.map((el, i) =>
                       <option key={i} value={el}> {el}</option>
                     )}
                   </select>
@@ -79,8 +83,13 @@ const PopupChangeGridSize = ({ triggerSubmitChangeGridSize, triggerCancelChangeG
               </td>
               <td>
                 <form>
-                  <select value={valueBattleship} onChange={handleChangeBattleship}>
-                    {shipsNumber.map((el, i) =>
+                  <select
+                    value={battleshipNum}
+                    onChange={(e) => battleshipContext.dispatch({
+                      type: 'HANDLE_CHANGE_BATTLESHIP_NUM',
+                      payload: e.target.value
+                    })}>
+                    {shipsNum.map((el, i) =>
                       <option key={i} value={el}> {el}</option>
                     )}
                   </select>
@@ -98,8 +107,13 @@ const PopupChangeGridSize = ({ triggerSubmitChangeGridSize, triggerCancelChangeG
               </td>
               <td>
                 <form>
-                  <select value={valueGrid} onChange={handleChangeGrid}>
-                    {gridSize.map((el, i) =>
+                  <select
+                    value={gridSize}
+                    onChange={(e) => battleshipContext.dispatch({
+                      type: 'HANDLE_CHANGE_GRID_SIZE',
+                      payload: e.target.value
+                    })}>
+                    {cellsNum.map((el, i) =>
                       <option key={i} value={el}> {el}</option>
                     )}
                   </select>
@@ -109,22 +123,22 @@ const PopupChangeGridSize = ({ triggerSubmitChangeGridSize, triggerCancelChangeG
                 <small>x</small>
               </td>
               <td>
-                <small>{valueGrid}</small>
+                <small>{gridSize}</small>
               </td>
             </tr>
           </tbody>
         </table>
-        <button 
-          className='btn-gssubmit' 
-          onClick={triggerSubmitChangeGridSize(valueCorvette, valueDestroyer, valueCruiser, valueBattleship, valueGrid)}
+        <button
+          className='btn-gssubmit'
+          onClick={triggerSubmitChangeGridSize(corvetteNum, destroyerNum, cruiserNum, battleshipNum, gridSize)}
         >
           <strong>Submit</strong>
         </button>
-        <button 
-          className='btn-gscancel' 
-          onClick={triggerCancelChangeGridSize}
+        <button
+          className='btn-gscancel'
+          onClick={() => battleshipContext.dispatch({ type: 'CANCEL_CHANGE_GRID_SIZE' })}
         >
-            Cancel
+          Cancel
         </button>
       </div>
     </div>

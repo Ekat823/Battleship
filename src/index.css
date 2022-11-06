@@ -80,7 +80,6 @@ table.style2 td:hover {
 	background-color: #f1f1f1;
 }
 
-
 table.style3 {
 	border: 0px solid #ece9e9;
 }
@@ -111,8 +110,6 @@ table.style3 td {
 	background-color: #e3f9f9;
 }
 
-
-
 .btn-shipblack {
 	background: url(../public/images/picShipBlack.png);
 	height: 30px;
@@ -140,11 +137,6 @@ table.style3 td {
 	margin: 3px;
 	border-radius: 10px;
 }
-
-
-
-
-
 
 .btn-rotate {
 	font-size: 1.5rem;
