@@ -25,7 +25,7 @@ const App = () => {
           <div>
             <ButtonChangeGridSize />
             <PopupChangeGridSize
-              triggerSubmitChangeGridSize={(valueCorvette, valueDestroyer, valueCruiser, valueBattleship, valueGrid) => () => dispatch({ type: 'SUBMIT_CHANGE_GRID_SIZE', valueCorvette, valueDestroyer, valueCruiser, valueBattleship, valueGrid })}
+              triggerSubmitChangeGridSize={(corvetteNum, destroyerNum, cruiserNum, battleshipNum, gridSize) => () => dispatch({ type: 'SUBMIT_CHANGE_GRID_SIZE', corvetteNum, destroyerNum, cruiserNum, battleshipNum, gridSize })}
             />
           </div>
           : null
