@@ -1,9 +1,9 @@
 const submitChangeGridSize = (state, action) => {
-    const corvette = Number(action.valueCorvette);
-    const destroyer = Number(action.valueDestroyer);
-    const cruiser = Number(action.valueCruiser);
-    const battleship = Number(action.valueBattleship);
-    const grid = Number(action.valueGrid);
+    const corvette = Number(action.corvetteNum);
+    const destroyer = Number(action.destroyerNum);
+    const cruiser = Number(action.cruiserNum);
+    const battleship = Number(action.battleshipNum);
+    const grid = Number(action.gridSize);
 
     const shipsTypes = [
         { shipSize: 1, numOfShips: corvette },
