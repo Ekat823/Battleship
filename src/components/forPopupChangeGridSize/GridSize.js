@@ -12,9 +12,7 @@ const GridSize = () => {
     <table className='gridsize'>
       <tbody>
         <tr>
-          <td>
-            <strong>Grid Size</strong>:
-          </td>
+          <td><strong>Grid Size</strong>:</td>
           <td>
             <form>
               <select
@@ -29,12 +27,8 @@ const GridSize = () => {
               </select>
             </form>
           </td>
-          <td>
-            <small>x</small>
-          </td>
-          <td>
-            <small>{gridSize}</small>
-          </td>
+          <td><small>x</small></td>
+          <td><small>{gridSize}</small></td>
         </tr>
       </tbody>
     </table>
