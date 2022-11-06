@@ -24,9 +24,7 @@ const App = () => {
         {state.placeShipsMessage !== null ?
           <div>
             <ButtonChangeGridSize />
-            <PopupChangeGridSize
-              triggerSubmitChangeGridSize={(corvetteNum, destroyerNum, cruiserNum, battleshipNum, gridSize) => () => dispatch({ type: 'SUBMIT_CHANGE_GRID_SIZE', corvetteNum, destroyerNum, cruiserNum, battleshipNum, gridSize })}
-            />
+            <PopupChangeGridSize />
           </div>
           : null
         }

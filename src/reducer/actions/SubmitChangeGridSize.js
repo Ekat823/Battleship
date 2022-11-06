@@ -23,7 +23,7 @@ const submitChangeGridSize = (state, action) => {
 
     const tableSize = grid;
 
-    console.log(checkNumber, (tableSize * tableSize))
+//console.log(checkNumber, (tableSize * tableSize))
 
     if (checkNumber / (tableSize * tableSize) > 0.3) {
         return { ...state, alert: true, alertText: 'Decrease the Number of Ships or Increase the Grid Size' }
