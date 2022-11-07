@@ -6,12 +6,14 @@ const ButtonCancel = () => {
   const battleshipContext = useContext(BattleshipContext);
 
   return (
-    <button
-      className='btn-gscancel'
-      onClick={() => battleshipContext.dispatch({ type: 'CANCEL_CHANGE_GRID_SIZE' })}
-    >
-      Cancel
-    </button>
+    <>
+      <button
+        className='btn-gscancel'
+        onClick={() => battleshipContext.dispatch({ type: 'CANCEL_CHANGE_GRID_SIZE' })}
+      >
+        Cancel
+      </button>
+    </>
   )
 }
 

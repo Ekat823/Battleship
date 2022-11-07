@@ -6,12 +6,14 @@ const ButtonRearrange = () => {
   const battleshipContext = useContext(BattleshipContext)
 
   return (
-    <button
-      className='btn-rearrange'
-      onClick={() => battleshipContext.dispatch({ type: 'TURN_ON_REARRANGE' })}
-    >
-      Rearrange
-    </button>
+    <>
+      <button
+        className='btn-rearrange'
+        onClick={() => battleshipContext.dispatch({ type: 'TURN_ON_REARRANGE' })}
+      >
+        Rearrange
+      </button>
+    </>
   )
 }
 

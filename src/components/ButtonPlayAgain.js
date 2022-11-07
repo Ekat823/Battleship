@@ -6,12 +6,14 @@ const ButtonPlayAgain = () => {
   const battleshipContext = useContext(BattleshipContext)
 
   return (
-    <button
-      className='btn-won'
-      onClick={() => battleshipContext.dispatch({ type: 'WON' })}
-    >
-      Play Again
-    </button>
+    <>
+      <button
+        className='btn-won'
+        onClick={() => battleshipContext.dispatch({ type: 'WON' })}
+      >
+        Play Again
+      </button>
+    </>
   )
 }
 
