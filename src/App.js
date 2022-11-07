@@ -15,7 +15,7 @@ export const BattleshipContext = React.createContext();
 const App = () => {
 
   const [state, dispatch] = useReducer(reducer, getInitialState());
-  console.log(state);
+  //console.log(state);
 
   return (
 
