@@ -9,7 +9,11 @@ const handlePlacingShips = (state, action) => {
   let squares = [...state.cellsLeft];
   const tableSize = state.tableSize;
 
-  if (state.placeShipsMessage !== 'click ship') {
+  if (state.placeShipsMessage === 'play') {
+    return { ...state}
+  }
+
+  if (state.placeShipsMessage === 'click cell') {
 
     if (!checkCellForPlacingShip(index, num, shipsSize, squares, tableSize)) {
       return { ...state, alert: true };
