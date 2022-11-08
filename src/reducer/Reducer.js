@@ -16,9 +16,9 @@ import handleChangeGridSize from "./actions/HandleChangeGridSize";
 const reducer = (state, action) => {
   let newState;
   switch (action.type) {
+//Change grid size button and popup
     case 'TURN_ON_CHANGE_GRID_SIZE':
       return turnOnChangeGridSize(state)
-
     case 'HANDLE_CHANGE_CORVETTE_NUM':
       return handleChangeCorvetteNum(state, action)
     case 'HANDLE_CHANGE_DESTROYER_NUM':
@@ -29,11 +29,11 @@ const reducer = (state, action) => {
       return handleChangeBattleshipNum(state, action)
       case 'HANDLE_CHANGE_GRID_SIZE':
       return handleChangeGridSize(state, action)
-
     case 'SUBMIT_CHANGE_GRID_SIZE':
       return submitChangeGridSize(state, action)
     case 'CANCEL_CHANGE_GRID_SIZE':
       return cancelChangeGridSize(state)
+//Placing ships    
     case 'CHOOSE_SHIP':
       return handleChoosingShips(state, action)
     case 'PLACE_SHIP':
@@ -50,6 +50,7 @@ const reducer = (state, action) => {
       return turnOnRearrange(state)
     case 'TURN_ON_PLAY':
       return turnOnPlay(state)
+//Playing    
     case 'PLAY':
       return handlePlaying(state, action)
     case 'WON':
