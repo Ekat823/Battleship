@@ -16,9 +16,10 @@ import handleChangeGridSize from "./actions/HandleChangeGridSize";
 const reducer = (state, action) => {
   let newState;
   switch (action.type) {
-//Change grid size button and popup
+//Change grid size button
     case 'TURN_ON_CHANGE_GRID_SIZE':
       return turnOnChangeGridSize(state)
+//Change grid size popup
     case 'HANDLE_CHANGE_CORVETTE_NUM':
       return handleChangeCorvetteNum(state, action)
     case 'HANDLE_CHANGE_DESTROYER_NUM':
