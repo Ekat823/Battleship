@@ -22,31 +22,35 @@ const getInitialState = () => {
 //for ButtonChangeGridSize
     changeGridSize: false,
 //for PopupChangeGridSize
+    shipsTypes: shipsTypes,
     corvetteNum: shipsTypes[0].numOfShips,
     destroyerNum: shipsTypes[1].numOfShips,
     cruiserNum: shipsTypes[2].numOfShips,
     battleshipNum: shipsTypes[3].numOfShips,
     shipsNum: [0, 1, 2, 3, 4],
     cellsNum: [6, 7, 8, 9, 10, 11, 12],
+    gridSize: tableSize,
+    shipsSize: shipsSize,
 //for TableShips
     placeShipsMessage: 'click ship',
     playerShips: Array(shipsSize.length).fill('shipBlack'),
+//for TableLeft placing ships 
     chooseVerticalOrHorizontal: false,
     chooseVertical: false,
     chooseHorizontal: false,
+//for TableLeft and TableRight    
     tableSize: tableSize,
-    gridSize: tableSize,
-    shipsTypes: shipsTypes,
     checkNumber: checkNumber,
     shipsNumber: shipsSize.length,
     shipIndex: 0,
-    shipsSize: shipsSize,
     cellsLeft: Array(tableSize * tableSize).fill('empty'),
     cellsRight: Array(tableSize * tableSize).fill('empty'),
     enemyHits: 0,
     playerHits: 0,
+// alert
     alert: false,
     alertText: 'Click Another Cell',
+//Won
     enemyWon: false,
     playerWon: false,
   };
