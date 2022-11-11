@@ -57,20 +57,22 @@ p.score {
 
 table.style1 {
 	border: 0px solid #bab8b8;;
-	width: 1300px;
-	height: 400px;
+	width: 80%;
+	height: auto;
 	align-items: center;
 }
 
 table.style2 {
 	border: 1px solid #bab8b8;
 	background-color: black;
+  width:27vw;
+
 }
 
 table.style2 td {
 	border: 1px solid #bab8b8;
-	width: 40px;
-	height: 40px;
+	width: 2.7vw;
+	height: 2.5vw;
 	text-align: center;
 	font-size: 1rem;
 	background-color: white;
