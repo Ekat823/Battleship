@@ -24,10 +24,13 @@ const TableLeft = ({ triggerVertical, triggerHorizontal }) => {
       for (let j = 0; j < columns; j++) {
         const num = i * columns + j;
         c.push(
-          <td key={num} onClick={() => battleshipContext.dispatch({ type: 'PLACE_SHIP', num })}>
+          <td
+            key={num}
+            onClick={() => battleshipContext.dispatch({ type: 'PLACE_SHIP', num })}
+          >
             <ShipImg el={shipsImgs[battleshipContext.state.cellsLeft[num]]} />
-            {battleshipContext.state.currentNum === num ? 
-            <PopupConfirm num={num} />
+            {battleshipContext.state.currentNum === num ?
+              <PopupConfirm num={num} />
               : null}
           </td>
         );
