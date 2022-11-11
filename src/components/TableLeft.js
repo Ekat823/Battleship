@@ -16,6 +16,7 @@ const TableLeft = ({ triggerVertical, triggerHorizontal }) => {
       ship: { id: 1, pic: './images/picShip.png', alt: 'ship' },
       hit: { id: 2, pic: './images/picHit.png', alt: 'hit' },
       miss: { id: 3, pic: './images/picMiss.png', alt: 'miss' },
+      empty: { id: 4, pic: './images/picShadow.png', alt: 'shadow' },
     }
 
     let result = [];
